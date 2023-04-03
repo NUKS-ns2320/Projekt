@@ -110,5 +110,11 @@ app.get('/profile', (req, res) =>{
 })
 //F9TUCc0PNl801xrm
 
+app.post('/logout', (req, res) =>{
+  
+  res.cookie('token', '').json(true);
+});
+
+
 
 app.listen(5000);
