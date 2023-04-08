@@ -9,6 +9,7 @@ import PlacesPage from "./pages/PlacesPage.jsx";
 import PlacesFormPage from "./pages/PlacesFormPage.jsx";
 import axios from "axios";
 import { UserContextProvider } from "./UserContext";
+import BookingPage from "./pages/BookingPage";
 
 
 axios.defaults.baseURL = "http://212.101.137.119:5000";
@@ -16,7 +17,7 @@ axios.defaults.withCredentials = true;
 
 function App() {
 
-      
+     // Vse poti so definirane v tej datoteki. Vse poti uporabljajo skupni layout in header (ti so definirani z datotekama Layout.jsx in Header.jsx)
 
   return (
     <UserContextProvider>
@@ -29,6 +30,7 @@ function App() {
         <Route path="/account/places" element ={<PlacesPage />} />
         <Route path="/account/places/new" element ={<PlacesFormPage />} />
         <Route path="/account/places/:id" element ={<PlacesFormPage />} />
+        <Route path="/account/bookings" element ={<BookingPage />} />
       </Route>
     </Routes>
     </UserContextProvider>
