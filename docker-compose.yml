@@ -1,0 +1,21 @@
+version: '3'
+services:
+  b-end:
+    image: nikolasekulovski-backend
+    restart: always
+    ports:
+      - '5000:5000'
+    network_mode: host
+      
+  f-end:
+    image: nikolasekulovski-frontend
+    restart: always
+    ports:
+      - '5175:5175'
+    network_mode: host
+
+
+
+
+  #volumes:
+   # db_data:
